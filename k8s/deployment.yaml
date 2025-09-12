@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helloworld-kub
+  labels:
+    app: helloworld-kub
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: helloworld-kub
+  template:
+    metadata:
+      labels:
+        app: helloworld-kub
+    spec:
+      containers:
+        - name: helloworld-kub
+          image: vnibandhe/helloworld-kub:latest
+          ports:
+            - containerPort: 8080
