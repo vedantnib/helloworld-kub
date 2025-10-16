@@ -1,7 +1,7 @@
 apiVersion: policy/v1
 kind: PodDisruptionBudget
 metadata:
-  name: pdb-a
+  name: sourcing-pdb-a
 spec:
   minAvailable: 1
   selector:
